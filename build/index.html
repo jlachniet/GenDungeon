@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<title>GenDungeon</title>
+
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Code+Pro:wght@400;600"
+		/>
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<div id="game">
+			<div class="log">
+				<noscript>
+					<div class="entry">Please enable JavaScript to continue.</div>
+				</noscript>
+				<div class="entry" id="loading" style="display: none;">Loading...</div>
+			</div>
+			<div class="input-prefix">&gt;</div>
+			<div class="input-box-wrapper">
+				<input type="text" class="input-box" />
+			</div>
+		</div>
+
+		<script>
+			document.getElementById('loading').style.display = 'block';
+		</script>
+		<script async defer src="js/GenDungeon.js"></script>
+	</body>
+</html>

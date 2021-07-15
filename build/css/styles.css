@@ -1,0 +1,63 @@
+html,
+body {
+	height: 100%;
+}
+
+html {
+	box-shadow: inset 0 0 1em 0.25em rgba(0, 0, 0, 0.25);
+}
+
+body {
+	background: #1a1f24;
+	color: #f6f7f0;
+	font-family: 'Source Code Pro', monospace;
+}
+
+.log,
+.input-prefix,
+.input-box-wrapper {
+	position: absolute;
+}
+
+.log {
+	bottom: 4em;
+	left: 1em;
+	line-height: 1.5;
+	right: 1em;
+	overflow: scroll;
+	top: 1em;
+	scrollbar-width: 0;
+	-ms-overflow-style: none;
+}
+
+.log::-webkit-scrollbar {
+	display: none;
+}
+
+.entry {
+	margin-bottom: 0.5em;
+}
+
+.input-prefix {
+	bottom: 1em;
+	left: 1em;
+	text-align: center;
+	width: 1em;
+}
+
+.input-box-wrapper {
+	left: 2em;
+	bottom: 0;
+	right: 0;
+}
+
+.input-box {
+	background: none;
+	border: none;
+	color: inherit;
+	font-family: inherit;
+	font-size: 1em;
+	outline: none;
+	padding: 1em;
+	width: 100%;
+}
