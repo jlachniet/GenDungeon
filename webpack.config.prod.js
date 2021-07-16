@@ -19,7 +19,7 @@ module.exports = {
 							[
 								'@babel/preset-env',
 								{
-									targets: ['> 0%'],
+									targets: ['supports es5'],
 									corejs: 3,
 									useBuiltIns: 'usage',
 								},
