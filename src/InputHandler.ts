@@ -5,7 +5,7 @@ class InputHandler {
 		const world = game.getWorld();
 
 		if (input == 'look') {
-			return world.getRoom(0, 0)!.getDescription();
+			return world.getActiveRoom()!.getDescription();
 		}
 
 		return 'Unknown command.';

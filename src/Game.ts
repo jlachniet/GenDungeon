@@ -17,7 +17,7 @@ class Game {
 		this.world = new World();
 		this.world.addRoom(0, 0);
 
-		this.log.addEntry(this.world.getRoom(0, 0)!.getFirstTimeDescription());
+		this.log.addEntry(this.world.getActiveRoom()!.getFirstTimeDescription());
 
 		this.addKeyboardListener();
 	}
