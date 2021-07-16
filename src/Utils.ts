@@ -1,5 +1,10 @@
-function capitalizeFirstCharacter(description: string) {
-	return description.charAt(0).toUpperCase() + description.slice(1);
+/**
+ * Takes a string, capitalizes the first letter, and returns the string.
+ * @param str The string to capitalize.
+ * @returns The capitalized string.
+ */
+function capitalize(str: string) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-export { capitalizeFirstCharacter };
+export { capitalize };

@@ -3,11 +3,17 @@ import InputHandler from './InputHandler';
 import Log from './Log';
 import World from './World';
 
+/**
+ * Contains an instance of the game, and all data related to it.
+ */
 class Game {
 	private inputBox!: InputBox;
 	private log!: Log;
 	private world!: World;
 
+	/**
+	 * Generates a new game.
+	 */
 	init() {
 		this.inputBox = new InputBox();
 
@@ -22,10 +28,16 @@ class Game {
 		this.addKeyboardListener();
 	}
 
+	/**
+	 * Gets the world.
+	 */
 	getWorld() {
 		return this.world;
 	}
 
+	/**
+	 * Adds a listener for keyboard events.
+	 */
 	private addKeyboardListener() {
 		document.addEventListener('keydown', (event) => {
 			if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) {
