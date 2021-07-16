@@ -1,10 +1,4 @@
-import InputBox from './InputBox';
-import KeyEvents from './KeyEvents';
-import Log from './Log';
+import Game from './Game';
 
-KeyEvents.addListener();
-
-Log.clear();
-Log.addEntry('Hello world!');
-
-InputBox.focus();
+const game = new Game();
+game.init();

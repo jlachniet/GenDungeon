@@ -1,19 +1,17 @@
-import Log from './Log';
-
 class InputBox {
-	private static element = <HTMLInputElement>(
+	private element = <HTMLInputElement>(
 		document.getElementsByClassName('input-box')[0]
 	);
 
-	static focus() {
+	focus() {
 		this.element.focus();
 	}
 
-	static getInput() {
-		Log.addEntry(`> ${this.element.value}`);
-		Log.addEntry('Hello world!');
+	getInput() {
+		const input = this.element.value;
 
 		this.element.value = '';
+		return input;
 	}
 }
 

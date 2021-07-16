@@ -1,13 +1,13 @@
 class Log {
-	private static DOMElement = <HTMLDivElement>(
+	private DOMElement = <HTMLDivElement>(
 		document.getElementsByClassName('log')[0]
 	);
 
-	static clear() {
+	clear() {
 		this.DOMElement.innerHTML = '';
 	}
 
-	static addEntry(entry: string) {
+	addEntry(entry: string) {
 		this.DOMElement.innerHTML += `<div class="entry">${entry}</div>`;
 	}
 }
