@@ -1,5 +1,6 @@
 import Monster from './Monster';
 import Thing from './Thing';
+import { capitalizeFirstCharacter } from './Utils';
 
 class Room {
 	private x: number;
@@ -13,15 +14,34 @@ class Room {
 		this.y = y;
 
 		this.contents = [];
-		this.visualDescription = 'A room.';
+		this.visualDescription = 'a room';
 
 		// Testing
 		this.contents.push(new Monster());
 	}
 
+	getFirstTimeDescription() {
+		return `You enter ${
+			this.visualDescription
+		}.<br><br>${this.getContentsDescription()}`;
+	}
+
 	getDescription() {
-		let descriptionLines = [];
-		descriptionLines.push(this.visualDescription);
+		return `${capitalizeFirstCharacter(
+			this.visualDescription
+		)}.<br><br>${this.getContentsDescription()}`;
+	}
+
+	getX() {
+		return this.x;
+	}
+
+	getY() {
+		return this.y;
+	}
+
+	private getContentsDescription() {
+		const descriptionLines = [];
 
 		if (this.isEmpty()) {
 			descriptionLines.push('This room is empty.');
@@ -34,14 +54,6 @@ class Room {
 		}
 
 		return descriptionLines.join('<br />');
-	}
-
-	getX() {
-		return this.x;
-	}
-
-	getY() {
-		return this.y;
 	}
 
 	private isEmpty() {

@@ -13,10 +13,11 @@ class Game {
 
 		this.log = new Log();
 		this.log.clear();
-		this.log.addEntry('Welcome!');
 
 		this.world = new World();
 		this.world.addRoom(0, 0);
+
+		this.log.addEntry(this.world.getRoom(0, 0)!.getFirstTimeDescription());
 
 		this.addKeyboardListener();
 	}
