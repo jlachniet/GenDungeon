@@ -1,3 +1,4 @@
+import Commands from './Commands';
 import Game from './Game';
 
 /**
@@ -11,13 +12,34 @@ class InputHandler {
 	 * @returns The response to the input.
 	 */
 	static handle(game: Game, input: string) {
+		const normalizedInput = input.toLowerCase();
+		Commands.setInput(normalizedInput, 'Unknown command.');
+
 		const world = game.getWorld();
+		const player = world.getPlayer();
 
-		if (input == 'look') {
-			return world.getActiveRoom()!.getDescription();
-		}
+		Commands.test(/^look$/g, () => {
+			return world.getActiveRoom().getDescription();
+		});
 
-		return 'Unknown command.';
+		Commands.test(/^north$/g, () => {
+			player.move('North');
+			return 'You go north.';
+		});
+		Commands.test(/^south$/g, () => {
+			player.move('South');
+			return 'You go south.';
+		});
+		Commands.test(/^east$/g, () => {
+			player.move('East');
+			return 'You go east.';
+		});
+		Commands.test(/^west$/g, () => {
+			player.move('West');
+			return 'You go west.';
+		});
+
+		return Commands.getOutput();
 	}
 }
 

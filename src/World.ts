@@ -12,7 +12,7 @@ class World {
 	 * Constructs a new world.
 	 */
 	constructor() {
-		this.player = new Player();
+		this.player = new Player(this);
 		this.rooms = [];
 	}
 
@@ -28,11 +28,28 @@ class World {
 	}
 
 	/**
+	 * Checks if a room exists at a given corordinate.
+	 * @param x The x-coordinate of the room.
+	 * @param y The y-ccordinate of the room.
+	 * @returns Whether the room exists.
+	 */
+	doesRoomExist(x: number, y: number): boolean {
+		return this.getRoom(x, y) !== undefined;
+	}
+
+	/**
 	 * Gets the room that the player is currently in.
 	 * @returns The active room.
 	 */
 	getActiveRoom() {
 		return this.getRoom(this.player.getX(), this.player.getY());
+	}
+
+	/**
+	 * Gets the player.
+	 */
+	getPlayer() {
+		return this.player;
 	}
 
 	/**
