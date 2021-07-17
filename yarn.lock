@@ -919,6 +919,11 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.50.tgz#1e0caa9364d3fccd2931c3ed96fdbeaa5d4cca83"
   integrity sha512-C6N5s2ZFtuZRj54k2/zyRhNDjJwwcViAM3Nbm8zjBpbqAdZ00mr0CFxvSKeO8Y/e03WVFLpQMdHYVfUd6SB+Hw==
 
+"@types/indefinite@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@types/indefinite/-/indefinite-2.3.1.tgz#1cb2eb6f7add399a30971c2569776190980733af"
+  integrity sha512-rRQndOl5JIImsT8iQLdMIcJ/+APtqZ9Gt2FztFiPtVHiSePDDbsWAR+2k7TEVq+a5s/trDzKtV/RmaW+/FVgTw==
+
 "@types/json-schema@*", "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.7":
   version "7.0.8"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.8.tgz#edf1bf1dbf4e04413ca8e5b17b3b7d7d54b59818"
@@ -1470,6 +1475,11 @@ import-local@^3.0.2:
   dependencies:
     pkg-dir "^4.2.0"
     resolve-cwd "^3.0.0"
+
+indefinite@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/indefinite/-/indefinite-2.4.1.tgz#6970cfdd373dde4e394dd5f783e59a7c0fb13637"
+  integrity sha512-4C1k983crWkOu4tfmx8by1jQ0xBLBo0EhNV1WsRem2y+IbzLmPkYycjrQe399heo3bZ5OYpImQo2o85vQ0HkSQ==
 
 interpret@^2.2.0:
   version "2.2.0"

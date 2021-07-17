@@ -1,4 +1,4 @@
-import Thing from './Thing';
+import Thing from './Things/Thing';
 import { capitalize } from './Utils';
 
 /**
