@@ -19,6 +19,14 @@ class Log {
 	 */
 	addEntry(entry: string) {
 		this.DOMElement.innerHTML += `<div class="entry">${entry}</div>`;
+		this.scrollDown();
+	}
+
+	/**
+	 * Scrolls the log down.
+	 */
+	private scrollDown() {
+		this.DOMElement.scrollTop = this.DOMElement.scrollHeight;
 	}
 }
 
