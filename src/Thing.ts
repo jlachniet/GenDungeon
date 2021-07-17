@@ -5,7 +5,7 @@ abstract class Thing {
 	private name: string;
 
 	/**
-	 * Constructs a thing.
+	 * Constructs a new thing.
 	 */
 	constructor(name: string) {
 		this.name = name;
