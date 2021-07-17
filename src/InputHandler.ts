@@ -18,23 +18,23 @@ class InputHandler {
 		const world = game.getWorld();
 		const player = world.getPlayer();
 
-		Commands.test(/^look$/g, () => {
+		Commands.test('look', () => {
 			return world.getActiveRoom().getDescription();
 		});
 
-		Commands.test(/^north$/g, () => {
+		Commands.test('north', () => {
 			player.move('North');
 			return 'You go north.';
 		});
-		Commands.test(/^south$/g, () => {
+		Commands.test('south', () => {
 			player.move('South');
 			return 'You go south.';
 		});
-		Commands.test(/^east$/g, () => {
+		Commands.test('east', () => {
 			player.move('East');
 			return 'You go east.';
 		});
-		Commands.test(/^west$/g, () => {
+		Commands.test('west', () => {
 			player.move('West');
 			return 'You go west.';
 		});

@@ -42,11 +42,18 @@ class Commands {
 	 * Tests to see if a command matches the input. If the input matches, the callback is run, and the output is set to
 	 * the return value of the callback. This will only happen once, so if multiple commands match the input, only the
 	 * first one to match will actually be called and affect the output.
-	 * @param regex The regex to test the input against.
+	 * @param match The string or regex to test the input against.
 	 * @param callback The callback to run if the input matches.
 	 */
-	static test(regex: RegExp, callback: Function) {
-		if (!this.hasMatched && this.input.match(regex)) {
+	static test(match: string | RegExp, callback: () => string) {
+		if (this.hasMatched) {
+			return;
+		}
+
+		if (
+			(typeof match === 'string' && this.input === match) ||
+			(match instanceof RegExp && match.test(this.input))
+		) {
 			this.hasMatched = true;
 			this.output = callback();
 		}
