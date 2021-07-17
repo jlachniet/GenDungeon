@@ -1,4 +1,3 @@
-import Monster from './Monster';
 import Thing from './Thing';
 import { capitalize } from './Utils';
 
